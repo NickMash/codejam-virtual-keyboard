@@ -1,0 +1,147 @@
+.wrapper{
+    text-align: center;
+    margin:0 auto;
+    font-family:Roboto,Segoe UI,"Tahoma, sans-serif";
+    max-width: 710px;
+}
+.keyboard{
+    padding: 5px 5px 0 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto;
+    background: #00c3b3;
+    border-radius: 10px;
+}
+.keyboard .row{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 8px;
+}
+.keyboard .key{
+    width:40px;
+    height:40px;
+    margin-left:6px;
+    font-weight:500;
+    line-height:40px;
+    text-align:center;
+    cursor:pointer;
+    user-select:none;
+    transition:border-radius .3s,background .2s;
+    background-color: #353535;
+    color: #FDF6FF;
+    font-size: 12px;
+    border-radius: 10px;
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+.keyboard .key:hover{
+    background:#251c1c
+}
+.keyboard .backspace,.keyboard .capslock,.keyboard .shift{
+    width:100px
+}
+.keyboard .alt,.keyboard .arrow,.keyboard .backspace,.keyboard .capslock,.keyboard .ctrl,.keyboard .del,.keyboard .enter,.keyboard .shift,.keyboard .shift-right,.keyboard .tab,.keyboard .win{
+    font-weight:600;
+    color:grey;
+    background-color:#1c232e
+}
+.keyboard .tab{
+    width:50px
+}
+.keyboard .del{
+    width:44px
+}
+.keyboard .enter,.keyboard .shift-right{
+    width:86px
+}
+.keyboard .ctrl{
+    width:40px
+}
+.keyboard .space{
+    width:330px
+}
+.keyboard sup{
+    position:absolute;
+    margin:-10px 0 0 -20px;
+    font-size:12px
+}
+#result{
+    width: 100%;
+    min-height: 100px;
+    display: block;
+    margin: 0 auto 10px;
+    font-size: 18px;
+    color: #444;
+}
+.off,.up{
+    display:none
+}
+.down{
+    display:inherit
+}
+.keyboard .key.active{
+    background-color:#5571ee;
+    border-radius:50px
+}
+
+@media(max-width: 720px) {
+    .win,
+    .delete,
+    .arrow,
+    .alt,
+    .ctrl,
+    .shift,
+    .tab,
+    .backslash,
+    .minus,
+    .equal {
+        display: none;
+    }
+
+    .keyboard .backspace, .keyboard .capslock,.keyboard.shift{
+        width: 60px;
+    }
+
+    .keyboard .enter, .keyboard .shift-right {
+        width: 47px;
+    }
+}
+
+
+@media(max-width: 641px) {
+    .capslock, .del {
+        display: none;
+    }
+
+
+    .keyboard .backspace, .keyboard .capslock,.keyboard.shift, .keyboard .enter, .keyboard .shift-right, .keyboard .key{
+        width: 35px;
+        overflow: hidden;
+    }
+
+    .keyboard .space {
+        width: 330px;
+    }
+}
+
+@media(max-width: 510px) {
+    .keyboard .backspace, .keyboard .capslock,.keyboard.shift, .keyboard .enter, .keyboard .shift-right, .keyboard .key{
+        width: 28px;
+    }
+
+    .keyboard .space {
+        width: 330px;
+    }
+}
+
+@media(max-width: 425px) {
+    .keyboard .backspace, .keyboard .capslock,.keyboard.shift, .keyboard .enter, .keyboard .shift-right, .keyboard .key{
+        width: 22px;
+    }
+
+    .keyboard .space {
+        width: 330px;
+    }
+}
